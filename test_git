@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INTRODUCTION AU PHP</title>
+</head>
+<body>
+<form action = "traitement.php" method="post">
+	<table border="1">
+		<tr>
+			<td>Nom:</td>
+			<td><input type="text" name="nom"></td>
+
+		</tr>
+		<tr>
+			<td>Age:</td>
+			<td><input type="text" name="age"></td>
+			
+		</tr>
+		<tr>
+			<td>Telephone:</td>
+			<td><input type="text" name="telephone"></td>
+			
+		</tr>
+		<tr>
+			<td>Date de naissance </td>
+			<td><input type="Date" name="naissance"></td>
+			
+		</tr>
+		<td colspan = "2" align = "center">
+			<input type = "submit" name = "Valider"></td>
+
+		<tr>
+
+
+
+
+</body>
+</html>
