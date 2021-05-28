@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carte de crédit</title>
+	<meta charset="utf-8"> </head>
+	<body>
+		<h3>Paiement par carte de crédit</h3>
+		<form action="creditCard.php" method="post">
+			<table>
+				<!--<tr>
+					<td>Montant à payer:</td>
+					<td><input type="number" step="0.01" name="amount"></td>
+				</tr>-->
+				<tr>
+					<td>Payer par:</td>
+					<td>
+					<input type="radio" name="creditCard" value="MasterCard">MasterCard <br> 
+					<input type="radio" name="creditCard" value="Visa">Visa <br>
+					<input type="radio" name="creditCard" value="AmericanExpress">American Express <br><br>
+				</tr>
+				
+				<tr>
+					<td>Numéro de carte:</td>
+					<td><input type="number" step="1" name="amount"></td>
+				</tr>
+				<tr>
+					<td>Nom de la carte:</td>
+					<td><input type="name" name="name"></td>
+				</tr>
+				<tr>
+					<td>Date d'expiration:</td>
+					<td><input type="number" name="Date"></td>
+					<td>/</td>
+					<td><input type="number" name="Date"></td>
+
+
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="button1" value="Soumettre">
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
