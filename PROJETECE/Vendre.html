@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+		<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="template.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>VENDRE</title>
+</head>
+<body>
+	<!-- HEADER -->
+	<div class="headr">
+		<a href="index.php"><img src="logo.png" height="150" width="200"></a>
+	</div>
+	<div class="row" id="">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+							<a class="dropdown-item" href="wine.php" style="color:grey; ">Wine</a><br>
+							<a class="dropdown-item" href="beer.php" style="color: grey;  ">Beer</a><br>
+							<a class="dropdown-item" href="liquor.php" style="color:grey; ">Liquor</a><br>
+						</div>
+					</li>
+					<li>
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buying</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+							<a class="dropdown-item" href="buyItNow.php" style="color:grey; ">Buy it now</a><br>
+							<a class="dropdown-item" href="bestOffer.php" style="color: grey; ">Best offer</a><br>
+							<a class="dropdown-item" href="auctions.php" style="color:grey; ">Auctions</a><br>
+						</div>
+					</li>
+					<li><a href="sell.php">Sell</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="cart.php"><img src="cart.png" width="30" height="30" ></a></li>
+					<li><a href="signInOrSignUp.php"><img src="profile_icon.png" width="30" height="30"></a></li>
+				</ul>
+			</div>
+        </nav>
+	</div>
+
+<!--NAV-->
+	<div class="navigation" >
+		<h1 style="margin-left: 550px; color: #402019; ">AJOUTER UN PRODUIT</h1> 
+
+		<form action="sellConfirmation.php" method="post"  enctype="multipart/form-data">
+			<div class="form-group">
+				<label for="item_name" style="margin-left: 450px;">NOM</label>
+				<input type="text" class="form-control is-valid" name="item_name" aria-describedby="nameHelp" placeholder="Titre" required style="width: 35%; margin-left: 450px; ">
+			</div>
+			<br>
+			<p style="margin-left:525px;">Type de vente souhaitée (Plusieurs choix possible)</p>
+		
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="sellBID" id="inlineCheckBoxBID" value="Auctions" style="margin-left: 570px;">
+				<label class="form-check-label" for="inlineCheckBoxBID" >Vente aux enchères</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="sellBO" id="inlineCheckBoxBO" value="Best Offer" style="margin-left: 570px;">
+				<label class="form-check-label" for="inlineCheckBoxBO" >Meilleur offre</label>
+			</div>
+			<div class="form-check form-check-inline">
+				<input class="form-check-input" type="checkbox" name="sellBIN" id="inlineCheckBoxBIN" value="Buy It Now" style="margin-left: 570px;">
+				<label class="form-check-label" for="inlineCheckBoxBIN" >Achat immédiat</label>
+			</div>
+			<div class="form-group">
+				<label for="category" style="margin-left: 450px;">CATEGORIES</label>
+				<input list="dataCategory" name="category" style="margin-left: 0px; width: 35%;">
+				<datalist id="dataCategory">
+					<option value="Livres">
+					<option value="Vetements">
+					<option value="Multimédia">
+				</datalist>
+			<!--<input type="text" class="form-control is-valid" name="inputCategory" aria-describedby="categoryHelp" placeholder="Enter item's Category" required style="width: 35%; margin-left: 450px; ">-->
+			</div>
+			<div class="form-group">
+				<label for="info" style="margin-left: 450px;">DESCRIPTION</label>
+				<textarea rows="3" cols="10"class="form-control is-valid" name="info" aria-describedby="descriptionHelp" placeholder="Décris ton article" required style="width: 35%; margin-left: 450px; "></textarea>
+			</div>
+			<div class="form-group">
+				<label for="price" style="margin-left: 450px;">PRIX   (Prix de départ enchères)</label>
+				<input type="number" min="0.01" step="0.01" name="price" class="form-control is-valid" aria-describedby="priceHelp" placeholder="0,00€" required style="width: 35%; margin-left: 450px;">
+			</div>	
+			<div class="form-group">
+				<label for="fromTime" style="margin-left: 450px;">DATE DE FIN DE PUBLICATION</label>
+				<input type="date"  name="fromTime" class="form-control is-valid" aria-describedby="pubDateHelp" required style="width: 35%; margin-left: 450px;" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
+			</div>
+			<div class="form-group">
+				<label for="toTime" style="margin-left: 450px;">DATE DE FIN DE PUBLICATION</label>
+				<input type="date"  name="toTime" class="form-control is-valid" aria-describedby="endDateHelp" required style="width: 35%; margin-left: 450px;" min="<?php echo date('Y-m-d'); ?>" value="<?php echo date('Y-m-d'); ?>">
+			</div>
+			<div class="form-group">
+				<label for="pic" style="margin-left: 450px;">AJOUTER PHOTOS (.png or .jpg)</label>
+				<input type="file" name="pic" id="imgItem" style="width: 35%; margin-left: 450px;" class="form-control"  aria-describedby="imgHelp">
+			</div>
+			<button type="submit" class="btn" style="margin-left: 450px;" name="subPubItem">AJOUTER</button><br><br>
+		</form>	
+		
+	</div>
+<!--FOOTER-->
+	
+<footer class="site-footer">
+		<div class="container">
+		<div class="row">
+			
+		
+			<div class="col-mb-5"> 
+				<h4>Nous contacter</h4>
+				<address>
+					<br>
+					ECE PARIS <br>
+					44 Quai de Grenelle <br>
+					75015 PARIS <br>
+					
+				</address>
+
+			</div>
+			</div>
+			<div class="bottom-footer">
+			<div class="col-mb-7">@ Copyright ECEMARKETPLACE 2021</div>
+
+			<ul class="footer-nav">
+				<li> <a href = "index.php">Acceuil</a></li>
+				<li> <a href="mailto:support@ecemarketplace.com">Contact</li>
+				<li> support@ecemarketplace.com </li>
+				<li><p>+33144390600</p></li>
+			</ul>
+	</div>
+	</div>
+	</footer>
+
+</body>
+</html>

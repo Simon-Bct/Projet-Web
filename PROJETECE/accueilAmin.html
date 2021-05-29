@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="template.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>ACCUEIL ADMINISTRATEUR</title>
+</head>
+<body>
+<div class="headr">
+		<a href="admin.php"><img src="logo.png" height="150" width="200"></a>
+	</div>
+	<!--navbar--->
+<div class="row" id="">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">user</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+						<a class="dropdown-item" href="adduser.php" style="color:grey; ">Add User</a><br>
+							<a class="dropdown-item" href="deleteuser.php" style="color: grey;  ">Delete User</a><br>
+							<a class="dropdown-item" href="updateuser.php" style="color:grey; ">Update User</a><br>
+						</div>
+					</li>
+					<li>
+						<a class="nav-link dropdown-toggle" href="itemManage.php#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Items</a>
+					
+					</li>
+					<li><a href="order.php">Order</a></li>
+					<li><a href="billinfo.php">Bill info</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="cart.php"><img src="cart.png" width="30" height="30" ></a></li>
+					<li><a href="signInOrSignUp.php"><img src="profile_icon.png" width="30" height="30"></a></li>
+				</ul>
+			</div>
+        </nav>
+	</div>
+	<!--fin nav---> 
+
+	<div class="col tex-center">
+	
+	<br>
+	<br>
+	<h1 style="text-align: center;">Accueil administrateur !</h1>
+	<br>
+	<p style="text-align: center;"><?php echo "E-Mail : " . $_SESSION['db_user']->getEmail() . "<br>";?></p>
+	<p style="text-align: center;"><?php echo "Nom : " . $_SESSION['db_user']->getName() . "<br>";?></p>	
+	<p style="text-align: center;"><?php echo " Prénom: " . $_SESSION['db_user']->getFirstName() . "<br>";?></p>	
+	</div>
+
+<!--FOOTER-->
+<!--FOOTER-->
+	
+<footer class="site-footer">
+		<div class="container">
+		<div class="row">
+			
+		
+			<div class="col-mb-5"> 
+				<h4>Nous contacter</h4>
+				<address>
+					<br>
+					ECE PARIS <br>
+					44 Quai de Grenelle <br>
+					75015 PARIS <br>
+					
+				</address>
+
+			</div>
+			</div>
+			<div class="bottom-footer">
+			<div class="col-mb-7">@ Copyright ECEMARKETPLACE 2021</div>
+
+			<ul class="footer-nav">
+				<li> <a href = "index.php">Acceuil</a></li>
+				<li> <a href="mailto:support@ecemarketplace.com">Contact</li>
+				<li> support@ecemarketplace.com </li>
+				<li><p>+33144390600</p></li>
+			</ul>
+	</div>
+	</div>
+	</footer>
+</body>
+</html>

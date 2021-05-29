@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="template.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>MON COMPTE</title>
+</head>
+<body>
+<div class="headr">
+		<a href="index.php"><img src="logo.png" height="150" width="200"></a>
+	</div>
+	<!----navbar--->
+
+	<div class="row" id="">
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-left">
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+							<a class="dropdown-item" href="wine.php" style="color:grey; ">Wine</a><br>
+							<a class="dropdown-item" href="beer.php" style="color: grey;  ">Beer</a><br>
+							<a class="dropdown-item" href="liquor.php" style="color:grey; ">Liquor</a><br>
+						</div>
+					</li>
+					<li>
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buying</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+							<a class="dropdown-item" href="buyItNow.php" style="color:grey; ">Buy it now</a><br>
+							<a class="dropdown-item" href="bestOffer.php" style="color: grey; ">Best offer</a><br>
+							<a class="dropdown-item" href="auctions.php" style="color:grey; ">Auctions</a><br>
+						</div>
+					</li>  
+					<li><a href="sell.php">Sell</a></li>
+					<li>
+						<a class="nav-link dropdown-toggle" href="#" id="navBarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Update your Informations</a>
+						<div class="dropdown-menu" aria-labelledby="navBarDropdownMenuLink">
+							<a class="dropdown-item" href="updateUserInfo.php" style="color:grey; ">Update Personal Information</a><br>
+							<a class="dropdown-item" href="billingInfo.php" style="color: grey; ">Update Billing Information</a><br>
+						</div>
+					</li>
+					<li><a href="userItems.php">Manage Items</a></li>
+					<li><a href="purchaseHistory.php">Purchase History</a></li>
+					<li><a href="sellHistory.php">Sell History</a></li>
+					<li><a href="orderHistory.php">Order History</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="cart.php"><img src="cart.png" width="30" height="30" ></a></li>
+					<li><a href="signInOrSignUp.php"><img src="profile_icon.png" width="30" height="30"></a></li>
+				</ul>
+			</div>
+        </nav>
+	</div>	
+	<!----fin navbar-------> 
+	
+
+	<div class="col tex-center">
+	
+	<br>
+	<br>
+	<h1 style="text-align: center;">VOTRE COMPTE</h1>
+	<br>
+	<br>
+	<p style="text-align: center;"><?php echo "E-Mail : " . $_SESSION['db_user']->getEmail() . "<br>";?></p>
+	<p style="text-align: center;"><?php echo "Nom : " . $_SESSION['db_user']->getName() . "<br>";?></p>	
+	<p style="text-align: center;"><?php echo "Prénom : " . $_SESSION['db_user']->getFirstName() . "<br>";?></p>	
+	<p style="text-align: center;"><?php echo "Mot de passe : " . $_SESSION['db_user']->getPasswd() . "<br>";	?></p>
+	<p style="text-align: center;"><?php echo "Favorite Background : " . $_SESSION['db_user']->getFavBackgroundNo() . "<br>";	?></p>
+	<p style="text-align: center;"><?php echo "Adresse : " . $_SESSION['db_user']->getAddr1() . "<br>";?></p>	
+	<p style="text-align: center;"><?php echo "Complément d'adresse : " . $_SESSION['db_user']->getAddr2() . "<br>";?></p>	
+	<p style="text-align: center;"><?php echo "Ville : " . $_SESSION['db_user']->getCity() . "<br>";?>	</p>
+	<p style="text-align: center;"><?php echo "Zip : " . $_SESSION['db_user']->getZip() . "<br>";?>	</p>
+	<p style="text-align: center;"><?php echo "Pays : " . $_SESSION['db_user']->getCountry() . "<br>";	?></p>
+	<p style="text-align: center;"><?php echo "Numéro de téléphone : " . $_SESSION['db_user']->getPhone() . "<br>";?></p>
+	<p style="text-align: center;"><?php echo "Date de naissance : " . $_SESSION['db_user']->getDateOfBirth() . "<br>";?></p>	
+	
+	
+	</div>
+	<form action="index.php" method="POST">
+		<p style="text-align: center;"><input style="text-align: center;" type="submit" name="killSession" value="Déconnexion"></p>
+	</form>
+
+<!--FOOTER-->
+	
+<footer class="site-footer">
+		<div class="container">
+		<div class="row">
+			
+		
+			<div class="col-mb-5"> 
+				<h4>Nous contacter</h4>
+				<address>
+					<br>
+					ECE PARIS <br>
+					44 Quai de Grenelle <br>
+					75015 PARIS <br>
+					
+				</address>
+
+			</div>
+			</div>
+			<div class="bottom-footer">
+			<div class="col-mb-7">@ Copyright ECEMARKETPLACE 2021</div>
+
+			<ul class="footer-nav">
+				<li> <a href = "index.php">Acceuil</a></li>
+				<li> <a href="mailto:support@ecemarketplace.com">Contact</li>
+				<li> support@ecemarketplace.com </li>
+				<li><p>+33144390600</p></li>
+			</ul>
+			
+	</div>
+	</div>
+	</footer>
+</body>
+</html>

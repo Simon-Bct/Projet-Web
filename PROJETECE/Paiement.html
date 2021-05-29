@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="Paymentcss.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>PAIEMENT</title>
+</head>
+<body>
+
+<!------ navbar-----> 
+
+<!-----fin navbar---->
+
+	<form id=paiement action="myAccount.php" method="post">
+ 
+  <fieldset>
+  	
+    <legend>INFORMATION BANQUAIRE </legend>
+    <p>Aucune carte n'a été trouvée, veuillez enregistrer une carte</p>
+   <div class="box">
+        <fieldset>
+        	
+          <legend>MOYEN DE PAIEMENT</legend>
+          
+              <input id="visa" name="type_of_payment" type="radio" value="visa">
+              <label for="visa">VISA</label>
+               <img src="Visa1.png" width="85" height="50"> 
+            <p></p>
+              <input id="americanexpress" name="type_of_payment" type="radio" value="americanexpress">
+              <label for="americanexpres">American Express</label>
+              <img src="americanexpress.png" width="85" height="50"> 
+           <p></p>
+              <input id="mastercard" name="type_of_payment" type="radio" value="mastercard">
+              <label for="mastercard">Mastercard</label>
+              <img src="Mastercard.png" width="85" height="50"> 
+           <p></p>
+        </fieldset>
+    
+     
+        <label for="numero_de_carte">Numéro de carte</label>
+        <input id="numero_de_carte" name="card_number" type="text" required>
+    
+      <p></p>
+        <label for="numero_de_carte">Date d'expiration</label>
+        <input type="text" name="expirationDate">
+
+    <p></p>
+        <label for="securite">CVC</label>
+        <input id="securite" name="cvc" type="text" required >
+      <p></p>
+      
+        <label for="nom_porteur">Titulaire de la carte</label>
+        <input id="nom_porteur" name="name_on_card" type="text" placeholder="Your firstname" required>
+      <p></p>
+      <input type="hidden" name="email" value="<?php echo $_SESSION["db_user"]->getEmail(); ?>">
+      <input type="submit" name="subBillInfo" value="Se souvenir de moi ?">
+
+  </fieldset>
+
+
+ 
+
+</form>
+
+</body>
+</html>

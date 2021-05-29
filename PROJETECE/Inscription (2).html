@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INSCRIPTION</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="template.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<div class="headr">
+		<a href="index.php"><img src="logo.png" height="150" width="200"></a>
+	</div>
+
+<!------ navbar-----> 
+
+<!-----fin navbar---->
+
+	<form action="index.php" method="post">
+		<div class="form-group">
+			<label for="user_email"style="margin-left: 450px;">ADRESSE EMAIL</label>
+			<input type="email" class="form-control is-valid"  name="user_email" aria-describedby="emailHelp" placeholder="Saisissez votre adresse email" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_name"style="margin-left: 450px;">NOM</label>
+			<input type="text" class="form-control is-valid" name="user_name" aria-describedby="nameHelp" placeholder="Nom" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_fName"style="margin-left: 450px;">PRENOM</label>
+			<input type="text" class="form-control is-valid" name="user_fName" aria-describedby="fNameHelp" placeholder="Prénom" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_date_of_b"style="margin-left: 450px;">DATE DE NAISSANCE</label>
+			<input type="date" class="form-control is-valid" required name="user_date_of_b" aria-describedby="dateHelp" style="width: 35%; margin-left: 450px;" value="2003-06-06" max="2003-06-06">
+			 <small id="dateHelp" class="form-text text-muted" style="color: red; margin-left: 450px; ">VOUS DEVEZ ETRE MAJEUR POUR CREER UN COMPTE!</small>
+		</div>
+		<div class="form-group">
+			<label for="user_Passwd" style="margin-left: 450px;">MOT DE PASSE</label>
+			<input type="password" name="user_Passwd" class="form-control is-valid" required placeholder="Mot de passe" style="width: 35%; margin-left: 450px;">
+		</div>
+		<div class="form-group">
+			<label for="user_addr1" style="margin-left: 450px;">ADRESSE </label>
+			<input type="text" class="form-control is-valid" required name="user_addr1" aria-describedby="adress1Help" placeholder="Adresse"style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_addr2" style="margin-left: 450px;">COMPLEMENT D'ADRESSE</label>
+			<input type="text" class="form-control is-valid" name="user_addr2" required aria-describedby="adress2Help" placeholder="Batiment,étage..."style="width: 35%; margin-left: 450px;" >						
+		</div>
+		<div class="form-group">
+			<label for="user_city" style="margin-left: 450px;">VILLE</label>
+			<input type="text" class="form-control is-valid" name="user_city" required aria-describedby="cityHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_zip" style="margin-left: 450px;">CODE POSTAL</label>
+			<input type="text" class="form-control is-valid" name="user_zip" required aria-describedby="zipHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_country" style="margin-left: 450px;">PAYS</label>
+			<input type="text" class="form-control is-valid" name="user_country" required aria-describedby="countryHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_phone" style="margin-left: 450px;">NUMERO DE TELEPHONE</label>
+			<input type="text" class="form-control is-valide" name="user_phone" required aria-describedby="phoneHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<button type="submit" class="btn" style="margin-left: 450px;" name="subSignUp">SOUMETTRE</button><br><br>
+	</form>
+</body>
+</html>
