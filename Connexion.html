@@ -1,122 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<title>ECE Market Place</title>
-	<meta charset="utf-8">
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="desciption" content="Site de vente de l'ECE.fr">
 
-	<meta name="viewport" content="width=device-width, initial-scale=1"> 
-	<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-	<style type="text/css">
+    <link rel="stylesheet" href="style.css">
 
-		#header{
-			text-align: center;
-			padding: 10px;
-			background-color: white;
-			color: #21759B;
-		}
-		input{
-			position: left;
-			color: black;
-		}
+    <link rel="shortcut icon"  href="img/logo.png">
 
-		#navigation{
-			background-color: #21759B;
-			color: white;
-			text-align: center;
-			padding: 20px;
-		}
-		input{
-			position: relative;
-			color: black;
-		}
-		#section {
-        	background-color: #cccccc;
-			height: 600px;
-			padding: 5px;
-			text-align: center;
-			color: black;
-		}
-		#footer{
-			background-color: #21759B;
-			color: white;
-			clear: left;
-			padding: 10px;
-		}
-	</style>
-	
-</head>
 
-<body>
+    <title>Connexion</title>
+  </head>
+  <body id="haut">
 
-	<div id="wrapper">
+    <!-- *********NAV BAR***********-->
 
-		<div id="header">
-			<h1>ECE Market Place</h1>
-				<ul>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#haut">
+      <img src="img/logo.png" alt="LogoEE" ></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-					<a href="Inscription.html">
-					<input type="button" onclick="" value="Inscription"> 
-					</a>
-					<a href="Connexion.html">
-						<input type="button" onclick="Connexion" value="Connexion">
-					</a>
-					
-				</ul>
-					
-				
-				
-			
-		</div>
 
-		<div id="navigation">
-			
-			<ul>
-				<a href="ECEMarketPlace.html">
-					<input type="button" onclick="Accueil" value="Accueil">
-				</a>
-				<a href="">
-					<input type="button" onclick="Tout Parcourir" value="Tout Parcourir">
-				</a>
-				<a href="">
-					<input type="button" onClick="Notification" value="Notification">
-				</a>
-				<a href="">
-					<input type="button" onClick="Panier" value="Panier">
-				</a>
-				<a href="">
-					<input type="button" onClick="Votre Compte" value="Votre Compte">
-				</a>
-			</ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="Accueil.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ToutParcourir.html">Tout Parcourir</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="Notification.html">Notification</a></li>
+            <li><a class="dropdown-item" href="VotreCompte.html">Votre Compte</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="MonPanier.html">Mon panier</a></li>
+          </ul>
+      </ul></li>
+  
+    </div>
+  </div>
+</nav>
 
-		</div>
+<div class="login-page">
+  <div class="form">
+    <form class="register-form">
+      <input type="text" placeholder="name"/>
+      <input type="password" placeholder="password"/>
+      <input type="text" placeholder="email address"/>
+      <button>create</button>
+      <p class="message">Already registered? <a href="#">Sign In</a></p>
+    </form>
+    <form class="login-form">
+      <input type="text" placeholder="username"/>
+      <input type="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered? <a href="#">Create an account</a></p>
+    </form>
+  </div>
+</div>
 
-		<div id="section">
-			
-			<form>
-				<div>
-					<label>Pseudo :</label>
-        			<input type="text" id="user_name">
-  				</div>
-    			<div>
-       				<label>Mot de passe:</label>
-        			<input type="password" id="motdepasse">
-    			</div>
-    			<div>
-    				<input type="button" value="Connexion">
-    			</div>
-    		</form>	
-		</div>
-
-		<div id="footer">
-			Copyright &copy; 2021 ECE Market Place<br>
-			<a href="mailto: ece@gmail.com">prime.properties@gmail.com</a>
-		</div>
-
-	</div>
-
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 </body>
 </html>
