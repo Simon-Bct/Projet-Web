@@ -28,7 +28,7 @@
   <nav class="navbar navbar-expand-lg navbar-light bg-light ">
     <a class="navbar-brand" href="#haut">
     <i class="fab fa-cc-amazon-pay"style="font-size: 70px; color: green; margin-left: 20px"></i>
-    <a class="navbar-brand" href="ECEMarketPlace1">ECE MARKET PLACE</a>
+    <a class="navbar-brand" href="ECEMarketPlace1.html">ECE MARKET PLACE</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -101,7 +101,8 @@
         <input id="nom_porteur" name="name_on_card" type="text" placeholder="Nom Titulaire" required>
       <p></p>
       <input type="hidden" name="email" value="<?php echo $_SESSION["db_user"]->getEmail(); ?>">
-      <input type="submit" name="subBillInfo" value="Se souvenir de moi ?">
+     <br><br> <input classe = "form-check-input" type="checkbox" value="" id="SubBillInfo">
+      <label class="form-check-label" for = "SubBillInfo"> Se souvenir de moi ? </label>
 
   </fieldset>
 

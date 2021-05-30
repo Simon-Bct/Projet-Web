@@ -18,19 +18,42 @@
     <title>ADMINISTRATEUR AJOUTER PROFIL</title>
 </head>
 <body <body id="haut">
-
-    <!-- *********NAV BAR***********-->
-
+  <!-- *********NAV BAR***********-->
 
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#haut">
     <i class="fab fa-cc-amazon-pay"style="font-size: 70px; color: green; margin-left: 20px"></i>
-    <a class="navbar-brand" href="#">ECE MARKET PLACE</a>
+    <a class="navbar-brand" href="#">Acceuil Administrateur</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="AjouterAcheteurVendeur.html">Ajouter un Vendeur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AdmiinistrateurProfilSupprimer.html">Supprimer un Vendeur</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Vendre.html">Ajouter un Article</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AdministrateurArticleSupprimer.html">Supprimer un Article</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AdministateurArticleUpdate.html">Modifier un Article</a>
+        </li><li class="nav-item">
+          <a class="nav-link" href="AdministrateurProfilUpdate.html">Modifier un Vendeur</a>
+        </li>
+        
+
+ 
+    </div>
   </div>
 </nav>
 
@@ -81,7 +104,7 @@
 	</div>
 <div class="form-group">
 		<label for="user_city"style="margin-left: 450px;">VILLE</label>
-		<input type="text" class="form-control is-valid"  name="user_city" aria-describedby="citylHelp" placeholder="vILLE" required style="width: 35%; margin-left: 450px;" >
+		<input type="text" class="form-control is-valid"  name="user_city" aria-describedby="citylHelp" placeholder="VILLE" required style="width: 35%; margin-left: 450px;" >
 	</div>
 	<div class="form-group">
 		<label for="user_zip"style="margin-left: 450px;">CODE POSTAL</label>
@@ -95,7 +118,7 @@
 		<label for="user_phone"style="margin-left: 450px;">NUMERO DE TELEPHONE</label>
 		<input type="text" class="form-control is-valid"  name="user_phone" aria-describedby="phonelHelp" placeholder="Numero de Téléphone" required style="width: 35%; margin-left: 450px;" >
 	</div>
-	<button type="submit" class="btn" style="margin-left: 450px;" name="subSignUp">AJOUTER PROFIL</button><br><br>
+	<br><button type="submit" class="btn btn-success" style="margin-left: 450px;" name="subSignUp">AJOUTER PROFIL</button><br><br>
  	
 </form>
 
