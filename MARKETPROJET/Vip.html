@@ -70,7 +70,7 @@
 				  	<div class="card-body">
 				  		<form method="post" action="buyItem.php">
 				  		<input type="hidden" name="id_item" value="<?php echo $tabItem[$i]->getIdItem(); ?>">
-				    	<p><center><button type="submit" class="btn btn-success">ACHETER</button></center></p>
+				    	<p><center><button type="submit" class="btn btn-success">AJOUTER AU PANIER</button></center></p>
 				    	</form>
 				    	<form method="post" action="">
 				    		<input type="hidden" name="id_item_cart" value="<?php echo $tabItem[$i]->getIdItem(); ?>">
@@ -84,7 +84,7 @@
 							?>
 		</div>
 	</div>
-	<footer class="container-fluid">
+	<footer class="container-fluid fixed-bottom">
   <div class="row justify-content-around align-items-cente">
     <div class="clo-12 col-md-4 text-center">
       <p>support@EceMarketPlace.com</p>
