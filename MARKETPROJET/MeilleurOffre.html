@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="desciption" content="Site de vente de l'ECE.fr">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <!--  Front Asome -->
+    <script src="https://kit.fontawesome.com/492d5ed0c4.js" crossorigin="anonymous"></script>
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon"  href="img/logo.png">
+
+
+    <title>MEILLEURS OFFRES</title>
+  </head>
+  <body id="haut">
+
+    <!-- *********NAV BAR***********-->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="#haut">
+    <i class="fab fa-cc-amazon-pay"style="font-size: 70px; color: green; margin-left: 20px"></i>
+    <a class="navbar-brand" href="ECEMarketPlace1">ECE MARKET PLACE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="MeilleurOffre.html">Meilleur Offre</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Encheres.html">Enchère</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="AchatImmédiat.html">Achat Immédiat</a>
+        </li>
+
+    </div>
+  </div>
+</nav>
+
+<!--NAV-->
+	<div class="navigation" >
+		<div class="card_gr">
+				<?php 
+					for($i=0;$i<sizeof($tabItem);$i++){		
+				 ?>
+				<div class="card" style="width: 18rem; border: 1px solid black; box-shadow: 1px; margin-bottom: 10px; margin-left: 10px;">
+			  		<img src="uploads/<?php echo $tabItem[$i]->getPic();?>" class="card-img-top" alt="<?php echo $tabItem[$i]->getPic();?>" width="178" height="200">
+			  		<div class="card-body">
+				    	<h5 class="card-title"><STRONG><?php echo $tabItem[$i]->getName(); ?></STRONG></h5>
+				    	<p class="card-text"><?php echo $tabItem[$i]->getInfo(); ?></p>
+				  	</div>
+			  		<ul class="list-group list-group-flush">
+				    <li class="list-group-item">Type de vente: <?php echo $tabItem[$i]->getSellMeth(); ?> </li>
+				    <li class="list-group-item">Categories: <?php echo $tabItem[$i]->getCategory(); ?></li>
+				    <li class="list-group-item">Prix: <?php echo $tabItem[$i]->getPrice(); ?></li>
+			  		</ul>
+				  	<div class="card-body">
+				  		<form method="post" action="buyItem.php">
+				  		<input type="hidden" name="id_item" value="<?php echo $tabItem[$i]->getIdItem(); ?>">
+				    	<p><center><button type="submit" class="btn btn-success">ACHETER</button></center></p>
+				    	</form>
+				    	<form method="post" action="">
+				    		<input type="hidden" name="id_item_cart" value="<?php echo $tabItem[$i]->getIdItem(); ?>">
+				    		<input type="hidden" name="cart_id_customer" value="<?php echo $_SESSION["db_user"]->getEmail(); ?>">
+				    		<p style="text-align: center;"><button type="submit" name="addCartBtn"><img src="addToCart.png" height="40" weight="40"></button></p><br>
+				    	</form>
+				  </div>
+				
+				</div>
+			<?php }
+							?>
+		</div>
+	</div>
+
+
+<footer class="container-fluid">
+  <div class="row justify-content-around align-items-cente">
+    <div class="clo-12 col-md-4 text-center">
+      <p>support@EceMarketPlace.com</p>
+      <P>37 Quai de Grenelle, 75015 Paris<br>
+         75015 Paris France</P>
+      </div>
+      <div class="clo-12 col-md-4  text-center">
+
+      <a href="https://facebook.com/" target="_blank">  <i class="fab fa-facebook" ></i></a>
+
+      <a href="https://twitter.com/" target="_blank">  <i class="fab fa-twitter" ></i></a>
+
+      <a href="https://instagram.com/" target="_blank">  <i class="fab fa-instagram" ></i></a>
+
+    </div>
+  </div>
+</footer>
+	</body>
+
+</html>

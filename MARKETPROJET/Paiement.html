@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="desciption" content="Site de vente de l'ECE.fr">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <!--  Front Asome -->
+    <script src="https://kit.fontawesome.com/492d5ed0c4.js" crossorigin="anonymous"></script>
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon"  href="img/logo.png">
+
+
+    <title>PAIEMENT</title>
+  </head>
+  <body id="haut">
+
+    <!-- *********NAV BAR***********-->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="#haut">
+    <i class="fab fa-cc-amazon-pay"style="font-size: 70px; color: green; margin-left: 20px"></i>
+    <a class="navbar-brand" href="ECEMarketPlace1">ECE MARKET PLACE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link " href="Paiement.html">Payer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ToutParcourir.html">Continuer mes Achats</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ToutParcourir.html">Notification</a>
+        </li>
+
+    </div>
+  </div>
+</nav>
+
+
+<!-----fin navbar---->
+
+	<form id=paiement action="myAccount.php" method="post">
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon"  href="img/logo.png">
+ 
+  <fieldset>
+  	
+    <legend>INFORMATION BANQUAIRE </legend>
+    <p>Aucune carte n'a été trouvée, veuillez enregistrer une carte</p>
+   <div class="box">
+        <fieldset>
+        	
+          <legend>MOYEN DE PAIEMENT</legend>
+          
+              <input id="visa" name="type_of_payment" type="radio" value="visa">
+              <label for="visa">VISA</label>
+               <img src="Visa1.png" width="85" height="50"> 
+            <p></p>
+              <input id="americanexpress" name="type_of_payment" type="radio" value="americanexpress">
+              <label for="americanexpres">American Express</label>
+              <img src="americanexpress.png" width="85" height="50"> 
+           <p></p>
+              <input id="mastercard" name="type_of_payment" type="radio" value="mastercard">
+              <label for="mastercard">Mastercard</label>
+              <img src="Mastercard.png" width="85" height="50"> 
+           <p></p>
+        </fieldset>
+    
+     
+        <label for="numero_de_carte">Numéro de carte</label>
+        <input id="numero_de_carte" name="card_number" type="text" required>
+    
+      <p></p>
+        <label for="numero_de_carte">Date d'expiration</label>
+        <input type="text" name="expirationDate">
+
+    <p></p>
+        <label for="securite">CVC</label>
+        <input id="securite" name="cvc" type="text" required >
+      <p></p>
+      
+        <label for="nom_porteur">Titulaire de la carte</label>
+        <input id="nom_porteur" name="name_on_card" type="text" placeholder="Nom Titulaire" required>
+      <p></p>
+      <input type="hidden" name="email" value="<?php echo $_SESSION["db_user"]->getEmail(); ?>">
+      <input type="submit" name="subBillInfo" value="Se souvenir de moi ?">
+
+  </fieldset>
+
+
+ 
+
+</form>
+
+<!-----------------FOOTER---------------->
+
+<footer class="container-fluid">
+  <div class="row justify-content-around align-items-cente">
+    <div class="clo-12 col-md-4 text-center">
+      <p>support@EceMarketPlace.com</p>
+      <P>37 Quai de Grenelle, 75015 Paris<br>
+         75015 Paris France</P>
+      </div>
+      <div class="clo-12 col-md-4  text-center">
+
+      <a href="https://facebook.com" target="_blank">  <i class="fab fa-facebook" ></i></a>
+
+      <a href="https://twitter.com" target="_blank">  <i class="fab fa-twitter" ></i></a>
+
+      <a href="https://instagram.com" target="_blank">  <i class="fab fa-instagram" ></i></a>
+
+    </div>
+  </div>
+</footer>
+
+
+
+    
+
+    <!-- JS -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    -->
+
+</body>
+</html>
+

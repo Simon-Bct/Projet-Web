@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="desciption" content="Site de vente de l'ECE.fr">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <!--  Front Asome -->
+    <script src="https://kit.fontawesome.com/492d5ed0c4.js" crossorigin="anonymous"></script>
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="shortcut icon"  href="img/logo.png">
+
+
+    <title>INSCRIPTION</title>
+  </head>
+  <body id="haut">
+
+    <!-- *********NAV BAR***********-->
+
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+    <a class="navbar-brand" href="#haut">
+    <i class="fab fa-cc-amazon-pay"style="font-size: 70px; color: green; margin-left: 20px"></i>
+    <a class="navbar-brand" href="#">ECE MARKET PLACE</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+  </div>
+</nav>
+
+<!-----fin navbar---->
+
+	<form action="index.php" method="post">
+		<div class="form-group">
+			<label for="user_email"style="margin-left: 450px;">ADRESSE EMAIL</label>
+			<input type="email" class="form-control is-valid"  name="user_email" aria-describedby="emailHelp" placeholder="Saisissez votre adresse email" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_name"style="margin-left: 450px;">NOM</label>
+			<input type="text" class="form-control is-valid" name="user_name" aria-describedby="nameHelp" placeholder="Nom" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_fName"style="margin-left: 450px;">PRENOM</label>
+			<input type="text" class="form-control is-valid" name="user_fName" aria-describedby="fNameHelp" placeholder="Prénom" required style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_date_of_b"style="margin-left: 450px;">DATE DE NAISSANCE</label>
+			<input type="date" class="form-control is-valid" required name="user_date_of_b" aria-describedby="dateHelp" style="width: 35%; margin-left: 450px;" value="2021-06-03" max="2021-06-03">
+			 
+		</div>
+		<div class="form-group">
+			<label for="user_Passwd" style="margin-left: 450px;">MOT DE PASSE</label>
+			<input type="password" name="user_Passwd" class="form-control is-valid" required placeholder="Mot de passe" style="width: 35%; margin-left: 450px;">
+		</div>
+		<div class="form-group">
+			<label for="user_addr1" style="margin-left: 450px;">ADRESSE </label>
+			<input type="text" class="form-control is-valid" required name="user_addr1" aria-describedby="adress1Help" placeholder="Adresse"style="width: 35%; margin-left: 450px;" >
+		</div>
+		<div class="form-group">
+			<label for="user_addr2" style="margin-left: 450px;">COMPLEMENT D'ADRESSE</label>
+			<input type="text" class="form-control is-valid" name="user_addr2" required aria-describedby="adress2Help" placeholder="Batiment,étage..."style="width: 35%; margin-left: 450px;" >						
+		</div>
+		<div class="form-group">
+			<label for="user_city" style="margin-left: 450px;">VILLE</label>
+			<input type="text" class="form-control is-valid" name="user_city" required aria-describedby="cityHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_zip" style="margin-left: 450px;">CODE POSTAL</label>
+			<input type="text" class="form-control is-valid" name="user_zip" required aria-describedby="zipHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_country" style="margin-left: 450px;">PAYS</label>
+			<input type="text" class="form-control is-valid" name="user_country" required aria-describedby="countryHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<div class="form-group">
+			<label for="user_phone" style="margin-left: 450px;">NUMERO DE TELEPHONE</label>
+			<input type="text" class="form-control is-valide" name="user_phone" required aria-describedby="phoneHelp" style="width: 35%; margin-left: 450px;" >			
+		</div>
+		<button type="submit" class="btn" style="margin-left: 450px;" name="subSignUp">SOUMETTRE</button><br><br>
+	</form>
+
+<footer class="container-fluid">
+  <div class="row justify-content-around align-items-cente">
+    <div class="clo-12 col-md-4 text-center">
+      <p>support@EceMarketPlace.com</p>
+      <P>37 Quai de Grenelle, 75015 Paris<br>
+         75015 Paris France</P>
+      </div>
+      <div class="clo-12 col-md-4  text-center">
+
+      <a href="https://facebook.com" target="_blank">  <i class="fab fa-facebook" ></i></a>
+
+      <a href="https://twitter.com" target="_blank">  <i class="fab fa-twitter" ></i></a>
+
+      <a href="https://instagram.com" target="_blank">  <i class="fab fa-instagram" ></i></a>
+
+    </div>
+  </div>
+</footer>
+
+
+
+    
+
+    <!-- JS -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+</body>
+</html>

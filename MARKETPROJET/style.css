@@ -1,0 +1,124 @@
+
+.bg-light{
+	background-color: #b7b6b9!important;
+}
+
+header .row{
+	background-image: url(img/vue.jpeg);
+	min-height: 70vh;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	align-items: center;
+	color: black;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+
+	
+}
+
+
+header .fromReservation{
+
+	background-color: rgba(0,0,0,0.5);
+	min-height: 70vh;
+	display: flex;
+	align-items: center;
+	font-family: 'Raleway', sans-serif;
+}
+
+header h1{
+	font-family: 'Mate SC', serif;;
+	color: black;
+}
+
+#presentation .media span{
+	color: green;
+	font-size: 50px;
+	width: 3rem;
+	text-align: center;
+
+
+}
+#presentation .media{
+	padding: .5rem 1rem;
+	cursor: pointer;
+	border-radius: 4px;
+	transition: all .4s ease-in-out;
+}
+
+#presentation .media:hover{
+	background-color: rgba(128,128,128,0.5);
+}
+
+.photoAvis{
+	min-height: calc(100vh - 50px);
+	background-image: url(img/venteAuEnchere.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+
+}
+
+
+
+
+
+.avisClient{
+	background-color: #d3dae4;
+	min-height: calc(100vh - 50px);
+
+}
+.avisClient span{
+	font-size: 5rem;
+	color:#17a2b8;
+}
+
+
+.avisClient h5{
+	font-size: 2rem;
+	color: #888;
+}
+
+#contact .row{
+	min-height: calc(100vh - 50px);
+
+}
+
+#contact{
+	background-image: url(img/contact.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: calc(100vh - 50px);
+}
+
+.formContact{
+	background-color: rgba(255,255,255,0.8);
+	padding: 2rem 1rem;
+}
+
+footer{
+	background-color: rgba(0,0,0,.6);
+	color:#999;
+	padding-top:2rem
+	padding-bottom:1.5rem;
+}
+
+
+footer a {
+	color: green;
+	font-size: 3rem;
+	transition: all .2s ease-in-out;
+}
+
+footer a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
